@@ -30,3 +30,35 @@
 *.exe
 *.out
 *.app
+
+# Arduino outputs
+*.hex
+
+# Autotools Outputs
+autom4te.cache/
+aclocal.m4
+ltmain.sh
+config.h.in
+configure
+ar-lib
+depcomp
+install-sh
+missing
+config.guess
+config.sub
+compile
+*.in
+dynamics_quad/m4/ltversion.m4
+dynamics_quad/m4/ltsugar.m4
+dynamics_quad/m4/ltoptions.m4
+dynamics_quad/m4/lt~obsolete.m4
+dynamics_quad/m4/libtool.m4
+
+# Backup files
+*~
+
+# Compilation Outputs
+build/
+dynamics_quad/run/main
+dynamics_quad/run/analyze
+dynamics_quad/run/sim*
