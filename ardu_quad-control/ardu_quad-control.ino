@@ -157,7 +157,7 @@ void loop() {
     u_p[i] = radio.CtrInput(i);
 
   // radio.PrintOut();
-  
+
   // u_c[0] = g[0]*u_p[2] - g[1]*u_p[3] - g[2]*u_p[1] + g[3]*u_p[0] - g[4]*ypr[2] - g[5]*ypr[1];
   // u_c[1] = g[0]*u_p[2] + g[1]*u_p[3] - g[2]*u_p[1] - g[3]*u_p[0] + g[4]*ypr[2] - g[5]*ypr[1];
   // u_c[2] = g[0]*u_p[2] - g[1]*u_p[3] + g[2]*u_p[1] - g[3]*u_p[0] + g[4]*ypr[2] + g[5]*ypr[1];
@@ -169,4 +169,6 @@ void loop() {
       myPilot.SetServo(u_c[i], i);
   }
   myPilot.PrintOut();
+
+  Serial.println(F("Testing changes"));
 }
