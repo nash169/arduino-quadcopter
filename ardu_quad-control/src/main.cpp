@@ -126,5 +126,5 @@ void loop() {
   Serial.print(" - ");
   Serial.println(State->ypr[2]);
 
-  // delay(200);
+  delay(200);
 }
