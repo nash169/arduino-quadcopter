@@ -62,3 +62,6 @@ build/
 dynamics_quad/run/main
 dynamics_quad/run/analyze
 dynamics_quad/run/sim*
+
+# Mac files
+.DS_Store
