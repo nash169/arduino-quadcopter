@@ -65,3 +65,6 @@ dynamics_quad/run/sim*
 
 # Mac files
 .DS_Store
+
+# VSCode files
+.vscode
