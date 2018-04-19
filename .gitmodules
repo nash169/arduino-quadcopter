@@ -1,12 +1,12 @@
-[submodule "ardu_quad-control/lib/MPU6050"]
-	path = ardu_quad-control/lib/MPU6050
-	url = https://github.com/nash169/MPU6050.git
-[submodule "ardu_quad-control/lib/IMUSensor"]
-	path = ardu_quad-control/lib/IMUSensor
+[submodule "arduQuad/lib/IMUSensor"]
+	path = arduQuad/lib/IMUSensor
 	url = https://github.com/nash169/IMUSensor.git
-[submodule "ardu_quad-control/lib/RadioDecoder"]
-	path = ardu_quad-control/lib/RadioDecoder
+[submodule "arduQuad/lib/RadioDecoder"]
+	path = arduQuad/lib/RadioDecoder
 	url = https://github.com/nash169/RadioDecoder.git
-[submodule "ardu_quad-control/lib/MotorControl"]
-	path = ardu_quad-control/lib/MotorControl
+[submodule "arduQuad/lib/MotorControl"]
+	path = arduQuad/lib/MotorControl
 	url = https://github.com/nash169/MotorControl.git
+[submodule "arduQuad/lib/MPU6050"]
+	path = arduQuad/lib/MPU6050
+	url = https://github.com/nash169/MPU6050.git
