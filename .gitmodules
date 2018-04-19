@@ -1,0 +1,3 @@
+[submodule "ardu_quad-control/lib/MPU6050"]
+	path = ardu_quad-control/lib/MPU6050
+	url = https://github.com/nash169/MPU6050.git
