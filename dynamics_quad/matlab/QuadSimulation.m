@@ -1,7 +1,7 @@
 %% Main simualtion
-
+clear; close all; clc;
 % Simulation times, in seconds.
-T = 10;
+T = 20;
 dt = .01;
 t = 0 : dt : T;
 
@@ -17,8 +17,8 @@ q = zeros(12,1);
 qdot = q;
 
 % Define initial positions
-q(1:3) = [0, 0, 0]'; % x
-q(4:6) = rand(3,1); % theta
+q(1:3) = [0, 0, 5]'; % x
+q(4:6) = pi/8*rand(3,1); % theta
 
 % Define initial velocities
 q(7:9) = [0, 0, 0]'; % v
@@ -27,13 +27,20 @@ deviation = 10; % [rad/s] Disturbances in angular velocity
 qdot(4:6) = deg2rad(2 * deviation * rand(3,1) - deviation); % thetadot
 q(10:12) = ThetaDot2Omega(q)\qdot(4:6); % omega
 
-% Get Optimal Control Gain Matrix
-Q = eye(12); % Q(4:6,4:6) = eye(3); % Q(10:12,10:12) = eye(3);
-rho = 0.1; R = eye(4);
-K = OptimalGain(Q,rho,R,A,B,C,D);
+% Optimal Control Gain Matrix
+rho = 0.1;
+Q = 0.01*eye(12); Q(4:6,4:6) = eye(3); Q(10:12,10:12) = eye(3); Q(3,3) = 0.1; Q(9,9) = 0.1;
+R = eye(4);
+
+% Kalman Filter Gain Matrix
+theta = 1;
+QN = eye(4);
+RN = eye(6);
+
+[K, L, sys] = OptimalGain(rho,Q,R,theta,QN,RN,A,B,C,D);
 
 % Initialize Controller
-z_ref = 5.;
+z_ref = 1;
 u  = AttitudeController(q,K) + AltitudeController(q, z_ref, K);
 
 % Plot frequency

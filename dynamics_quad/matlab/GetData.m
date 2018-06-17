@@ -8,7 +8,7 @@ switch model
         % Motor
         dat.k = 1;
         % Drag
-        dat.r = 1;
+        dat.r = 0;
         dat.d = 1;
         % Geometry
         dat.a = 1;

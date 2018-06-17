@@ -1,4 +1,4 @@
-function K = OptimalGain(Q,rho,R,varargin)
+function [K, L, sys] = OptimalGain(rho,Q,R,theta,Qn,Rn,varargin)
 %OPTIMALGAIN Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -17,5 +17,6 @@ switch length(varargin)
 end
 
 [K,~,~] = lqr(sys,Q,rho*R);
+[~,L,~] = kalman(sys,Qn,theta*Rn);
 end
 

@@ -4,8 +4,10 @@ function u = AltitudeController(q, z_ref, K)
 e = q(3) - z_ref;
 
 K_z = K(:,3);
-% K_zdot = K(:,9);
+K_zdot = K(:,9);
 
-u = 0.8*9.81 - K_z*e;
+u = 0.8*9.81 - K_z*e- K_zdot*e;
+% u =  - K_z*e- K_zdot*e;
+% u = - K_z*e - K_zdot*e;
 end
 
